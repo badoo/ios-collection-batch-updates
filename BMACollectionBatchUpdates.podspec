@@ -1,8 +1,7 @@
 Pod::Spec.new do |s|
-
   s.name         = "BMACollectionBatchUpdates"
   s.version      = "1.0.0"
-  s.summary      = ""
+  s.summary      = "Safely perform batch updates in UITableView and UICollectionView"
   s.description  = <<-DESC
                    BMACollectionBatchUpdates` is a set of classes and extensions to UICollectionView and UITableView to perform safe batch updates of these views.
                    DESC
@@ -14,5 +13,4 @@ Pod::Spec.new do |s|
   s.source_files = "BMACollectionBatchUpdates/*"
   s.public_header_files = "BMACollectionBatchUpdates/*.h"
   s.requires_arc = true
-
 end
