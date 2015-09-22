@@ -1,0 +1,23 @@
+{
+  "name": "BMACollectionBatchUpdates",
+  "version": "1.0.0",
+  "summary": "",
+  "description": "                   BMACollectionBatchUpdates` is a set of classes and extensions to UICollectionView and UITableView to perform safe batch updates of these views.\n",
+  "homepage": "http://github.com/badoo/BMACollectionBatchUpdates",
+  "license": {
+    "type": "MIT"
+  },
+  "authors": {
+    "Vladimir Magaziy": "vladimir.magaziy@corp.badoo.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/badoo/BMACollectionBatchUpdates.git",
+    "tag": "1.0.0"
+  },
+  "source_files": "BMACollectionBatchUpdates/*",
+  "public_header_files": "BMACollectionBatchUpdates/*.h",
+  "requires_arc": true
+}

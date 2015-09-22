@@ -1,0 +1,14 @@
+PODS:
+  - BMACollectionBatchUpdates (1.0.0)
+
+DEPENDENCIES:
+  - BMACollectionBatchUpdates (from `..`)
+
+EXTERNAL SOURCES:
+  BMACollectionBatchUpdates:
+    :path: ..
+
+SPEC CHECKSUMS:
+  BMACollectionBatchUpdates: f98cbb052f7b8fbd27260c0b523dc282082c9fd3
+
+COCOAPODS: 0.37.2

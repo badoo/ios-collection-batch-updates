@@ -1,0 +1,4 @@
+language: objective-c
+xcode_workspace: Example/BatchUpdatesExample.xcworkspace
+xcode_scheme: BatchUpdatesExample
+xcode_sdk: iphonesimulator8.1
