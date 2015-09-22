@@ -7,7 +7,7 @@
 
 ## How to use
 
-In orger to generate the mentioned updates it has to make collection item and section conform the `BMAUpdatableCollectionItem` and`BMAUpdatableCollectionItem` protocols respectively:
+In order to generate the mentioned updates it has to make collection item and section conform the `BMAUpdatableCollectionItem` and`BMAUpdatableCollectionItem` protocols respectively:
 
 ```objectivec
 @interface BMAExampleItemsSection : NSObject <BMAUpdatableCollectionSection>
