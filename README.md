@@ -67,10 +67,12 @@ Once both old and new data models are available, it has to calculate changes and
     ```
     pod 'BMACollectionBatchUpdates', '~> 1.0.0' 
     ```
+
 If you like to live on the bleeding edge, you can use the `master` branch with:
     ```
-    pod 'BMACollectionBatchUpdates', :git => 'https://github.com/badoo/BMACollectionBatchUpdates'
+    pod 'BMACollectionBatchUpdates', :git => 'https://github.com/badoo/ios-collection-batch-updates'
     ```
+
 2. Run `pod install`
 
 ### Manually
