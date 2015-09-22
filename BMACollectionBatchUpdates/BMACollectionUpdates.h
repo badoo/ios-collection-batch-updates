@@ -69,8 +69,8 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 
 @interface BMACollectionItemUpdate : BMACollectionUpdate
 
-@property (nonatomic, strong) NSIndexPath *indexPath1;
-@property (nonatomic, strong) NSIndexPath *indexPath2;
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSIndexPath *indexPathNew;
 
 + (instancetype)updateWithType:(BMACollectionUpdateType)type
                      indexPath:(NSIndexPath *)indexPath
@@ -81,8 +81,8 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 
 @interface BMACollectionSectionUpdate : BMACollectionUpdate
 
-@property (nonatomic, assign) NSUInteger section1;
-@property (nonatomic, assign) NSUInteger section2;
+@property (nonatomic, assign) NSUInteger sectionIndex;
+@property (nonatomic, assign) NSUInteger sectionIndexNew;
 
 + (instancetype)updateWithType:(BMACollectionUpdateType)type
                   sectionIndex:(NSUInteger)sectionIndex
