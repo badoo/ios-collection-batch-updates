@@ -34,6 +34,10 @@
 
 @implementation BMACollectionUpdate
 
+- (instancetype)init {
+    return nil;
+}
+
 - (instancetype)initWithType:(BMACollectionUpdateType)type object:(id)object {
     self = [super init];
     if (self) {
@@ -43,8 +47,8 @@
     return self;
 }
 
-+ (void)calculateUpdatesForOldModel:(NSArray /*<BMAUpdatableCollectionSection *>*/ *)oldSections
-                           newModel:(NSArray /*<BMAUpdatableCollectionSection *>*/ *)newSections
++ (void)calculateUpdatesForOldModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)oldSections
+                           newModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)newSections
               sectionsPriorityOrder:(NSArray /*<NSString *>*/ *)sectionsPriorityOrder
                eliminatesDuplicates:(BOOL)eliminatesDuplicates
                          completion:(void (^)(NSArray /*<BMAUpdatableCollectionSection *>*/ *sections, NSArray /*<BMACollectionUpdate *>*/ *updates))completion {

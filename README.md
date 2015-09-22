@@ -1,8 +1,8 @@
-# BMACollectionBatchUpdates [![Build Status](https://api.travis-ci.org/badoo/BMACollectionBatchUpdates.svg?branch=1.0.0)](https://travis-ci.org/badoo/BMACollectionBatchUpdates)
+# BMACollectionBatchUpdates [![Build Status](https://api.travis-ci.org/badoo/ios-collection-batch-updates.svg?branch=1.0.0)](https://travis-ci.org/badoo/ios-collection-batch-updates)
 `BMACollectionBatchUpdates` is a set of classes to generate updates and extensions to `UICollectionView` and `UITableView` to perform them safely in a batch manner.
 
 <div align="center">
-<img src="./Demo/Demo.gif" />
+<img src="./demoimages/demo.gif" />
 </div>
 
 ## How to use
@@ -20,7 +20,7 @@ In orger to generate the mentioned updates it has to make collection item and se
 Once both old and new data models are available, it has to calculate changes and apply them:
 
 ```objectivec
-@implemetation BMAExampleCollectionViewController
+@implementation BMAExampleCollectionViewController
 
 - (void)setSections:(NSArray *)sections {
 	[BMACollectionUpdate calculateUpdatesForOldModel:self.sections
@@ -40,7 +40,7 @@ Once both old and new data models are available, it has to calculate changes and
 ```
 
 ```objectivec
-@implemetation BMAExampleTableViewController
+@implementation BMAExampleTableViewController
 
 - (void)setSections:(NSArray *)sections {
 	[BMACollectionUpdate calculateUpdatesForOldModel:self.sections
@@ -75,7 +75,7 @@ If you like to live on the bleeding edge, you can use the `master` branch with:
 
 ### Manually
 
-1. Clone, add as a submodule or [download.](https://github.com/badoo/BMACollectionBatchUpdates/archive/master.zip)
+1. Clone, add as a submodule or [download.](https://github.com/badoo/ios-collection-batch-updates/archive/master.zip)
 2. Add all the files under `BMACollectionBatchUpdates` to your project.
 3. Make sure your project is configured to use ARC.
 

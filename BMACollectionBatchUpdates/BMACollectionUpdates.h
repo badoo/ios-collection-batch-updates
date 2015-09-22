@@ -32,7 +32,7 @@
 @end
 
 @protocol BMAUpdatableCollectionSection <BMAUpdatableCollectionItem>
-@property (nonatomic, strong) NSArray /*<id<BMAUpdatableCollectionItem>> */ *items;
+@property (nonatomic, strong) NSArray /*<id<BMAUpdatableCollectionItem>>*/ *items;
 @end
 
 typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
@@ -53,12 +53,13 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 /// @param sectionsPriorityOrder array of section identifiers, in order for which sections are to be proceeded when checking items uniqueness; if nil then sections are processed in natural order; may contain not all section ids, only ones that should be processed first
 /// @param eliminatesDuplicates flag indicating duplicated items in different sections are to be eliminated during update
 /// @param completion block used to return results: sections and changes may be nil, in this case UICollectionview/UITableView is supposed be reload completely using -reloadData
-+ (void)calculateUpdatesForOldModel:(NSArray /*<BMAUpdatableCollectionSection *>*/ *)oldSections
-                           newModel:(NSArray /*<BMAUpdatableCollectionSection *>*/ *)newSections
++ (void)calculateUpdatesForOldModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)oldSections
+                           newModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)newSections
               sectionsPriorityOrder:(NSArray /*<NSString *>*/ *)sectionsPriorityOrder
                eliminatesDuplicates:(BOOL)eliminatesDuplicates
-                         completion:(void (^)(NSArray /*<BMAUpdatableCollectionSection *>*/ *sections, NSArray /*<BMACollectionUpdate *>*/ *updates))completion;
+                         completion:(void (^)(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *sections, NSArray /*<BMACollectionUpdate *>*/ *updates))completion;
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithType:(BMACollectionUpdateType)type object:(id)object NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, readonly, getter=isItemUpdate) BOOL itemUpdate;
