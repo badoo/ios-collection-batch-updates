@@ -356,7 +356,7 @@ static inline NSString *NSStringFromBMACollectionUpdateType(BMACollectionUpdateT
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ { %@: %lu -> %lu }", super.description, NSStringFromBMACollectionUpdateType(self.type), (unsigned long) self.sectionIndex, (unsigned long) self.sectionIndexNew];
+    return [NSString stringWithFormat:@"%@ { %@: %lu -> %lu }", super.description, NSStringFromBMACollectionUpdateType(self.type), (unsigned long)self.sectionIndex, (unsigned long)self.sectionIndexNew];
 }
 
 - (BOOL)isSectionUpdate {
