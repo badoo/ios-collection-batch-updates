@@ -46,6 +46,8 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 
 @property (nonatomic, readonly) BMACollectionUpdateType type;
 @property (nonatomic, readonly) id object;
+@property (nonatomic, readonly, getter=isItemUpdate) BOOL itemUpdate;
+@property (nonatomic, readonly, getter=isSectionUpdate) BOOL sectionUpdate;
 
 /// Generates updates for UICollectionView/UITableView
 /// @param oldSections old list of sections: array of BMAUpdatableCollectionSection instances
@@ -61,9 +63,6 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithType:(BMACollectionUpdateType)type object:(id)object NS_DESIGNATED_INITIALIZER;
-
-@property (nonatomic, readonly, getter=isItemUpdate) BOOL itemUpdate;
-@property (nonatomic, readonly, getter=isSectionUpdate) BOOL sectionUpdate;
 
 @end
 
