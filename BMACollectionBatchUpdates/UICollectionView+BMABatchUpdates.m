@@ -46,22 +46,22 @@
                     switch (update.type) {
                         case BMACollectionUpdateTypeReload: {
                             if (reloadCellBlock) {
-                                UICollectionViewCell *cell = [self cellForItemAtIndexPath:itemUpdate.indexPath1];
+                                UICollectionViewCell *cell = [self cellForItemAtIndexPath:itemUpdate.indexPath];
                                 if (cell) {
-                                    reloadCellBlock(cell, itemUpdate.indexPath1);
+                                    reloadCellBlock(cell, itemUpdate.indexPath);
                                 }
                             }
                             
                             break;
                         }
                         case BMACollectionUpdateTypeDelete:
-                            [self deleteItemsAtIndexPaths:@[ itemUpdate.indexPath1 ]];
+                            [self deleteItemsAtIndexPaths:@[ itemUpdate.indexPath ]];
                             break;
                         case BMACollectionUpdateTypeInsert:
-                            [self insertItemsAtIndexPaths:@[ itemUpdate.indexPath2 ]];
+                            [self insertItemsAtIndexPaths:@[ itemUpdate.indexPathNew ]];
                             break;
                         case BMACollectionUpdateTypeMove:
-                            [self moveItemAtIndexPath:itemUpdate.indexPath1 toIndexPath:itemUpdate.indexPath2];
+                            [self moveItemAtIndexPath:itemUpdate.indexPath toIndexPath:itemUpdate.indexPathNew];
                             break;
                         default:
                             break;
@@ -70,16 +70,16 @@
                     BMACollectionSectionUpdate *sectionUpdate = (BMACollectionSectionUpdate *)update;
                     switch (update.type) {
                         case BMACollectionUpdateTypeReload:
-                            [self reloadSections:[NSIndexSet indexSetWithIndex:sectionUpdate.section1]];
+                            [self reloadSections:[NSIndexSet indexSetWithIndex:sectionUpdate.sectionIndex]];
                             break;
                         case BMACollectionUpdateTypeDelete:
-                            [self deleteSections:[NSIndexSet indexSetWithIndex:sectionUpdate.section1]];
+                            [self deleteSections:[NSIndexSet indexSetWithIndex:sectionUpdate.sectionIndex]];
                             break;
                         case BMACollectionUpdateTypeInsert:
-                            [self insertSections:[NSIndexSet indexSetWithIndex:sectionUpdate.section2]];
+                            [self insertSections:[NSIndexSet indexSetWithIndex:sectionUpdate.sectionIndexNew]];
                             break;
                         case BMACollectionUpdateTypeMove:
-                            [self moveSection:sectionUpdate.section1 toSection:sectionUpdate.section2];
+                            [self moveSection:sectionUpdate.sectionIndex toSection:sectionUpdate.sectionIndexNew];
                             break;
                         default:
                             break;

@@ -28,7 +28,7 @@
 #define SHOW_CONFIGURATION_CONTROLS 0
 
 @interface BMAExampleItemsSection : NSObject <BMAUpdatableCollectionSection>
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, copy) NSArray *items;
 @property (nonatomic, copy) NSString *uid;
 - (instancetype)initWithId:(NSString *)sectionId items:(NSArray *)items;
 @end

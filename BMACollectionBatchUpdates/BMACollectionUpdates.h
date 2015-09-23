@@ -27,12 +27,12 @@
 @protocol BMAUpdatableCollectionItem <NSObject>
 @property (nonatomic, readonly, copy) NSString *uid;
 @optional
-@property (nonatomic, readonly, strong) id userInfo;
+@property (nonatomic, readonly) id userInfo;
 
 @end
 
 @protocol BMAUpdatableCollectionSection <BMAUpdatableCollectionItem>
-@property (nonatomic, strong) NSArray /*<id<BMAUpdatableCollectionItem>>*/ *items;
+@property (nonatomic, copy) NSArray /*<id<BMAUpdatableCollectionItem>>*/ *items;
 @end
 
 typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
@@ -46,6 +46,8 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 
 @property (nonatomic, readonly) BMACollectionUpdateType type;
 @property (nonatomic, readonly) id object;
+@property (nonatomic, readonly, getter=isItemUpdate) BOOL itemUpdate;
+@property (nonatomic, readonly, getter=isSectionUpdate) BOOL sectionUpdate;
 
 /// Generates updates for UICollectionView/UITableView
 /// @param oldSections old list of sections: array of BMAUpdatableCollectionSection instances
@@ -62,15 +64,12 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithType:(BMACollectionUpdateType)type object:(id)object NS_DESIGNATED_INITIALIZER;
 
-@property (nonatomic, readonly, getter=isItemUpdate) BOOL itemUpdate;
-@property (nonatomic, readonly, getter=isSectionUpdate) BOOL sectionUpdate;
-
 @end
 
 @interface BMACollectionItemUpdate : BMACollectionUpdate
 
-@property (nonatomic, strong) NSIndexPath *indexPath1;
-@property (nonatomic, strong) NSIndexPath *indexPath2;
+@property (nonatomic) NSIndexPath *indexPath;
+@property (nonatomic) NSIndexPath *indexPathNew;
 
 + (instancetype)updateWithType:(BMACollectionUpdateType)type
                      indexPath:(NSIndexPath *)indexPath
@@ -81,8 +80,8 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 
 @interface BMACollectionSectionUpdate : BMACollectionUpdate
 
-@property (nonatomic, assign) NSUInteger section1;
-@property (nonatomic, assign) NSUInteger section2;
+@property (nonatomic) NSUInteger sectionIndex;
+@property (nonatomic) NSUInteger sectionIndexNew;
 
 + (instancetype)updateWithType:(BMACollectionUpdateType)type
                   sectionIndex:(NSUInteger)sectionIndex

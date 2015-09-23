@@ -305,22 +305,22 @@ static inline NSString *NSStringFromBMACollectionUpdateType(BMACollectionUpdateT
                       object:(id)object {
     self = [self initWithType:type object:object];
     if (self) {
-        _indexPath1 = indexPath;
-        _indexPath2 = newIndexPath;
+        _indexPath = indexPath;
+        _indexPathNew = newIndexPath;
     }
     return self;
 }
 
 - (NSString *)description {
     NSString *description = [NSString stringWithFormat:@"%@ { %@: ", super.description, NSStringFromBMACollectionUpdateType(self.type)];
-    NSString *indexPath1Description = self.indexPath1 ? [NSString stringWithFormat:@"'%lu - %lu'", (unsigned long)self.indexPath1.section, (unsigned long)self.indexPath1.item] : nil;
-    NSString *indexPath2Description = self.indexPath2 ? [NSString stringWithFormat:@"'%lu - %lu'", (unsigned long)self.indexPath2.section, (unsigned long)self.indexPath2.item] : nil;
-    if (indexPath1Description && indexPath2Description) {
-        description = [description stringByAppendingFormat:@"%@ -> %@ }", indexPath1Description, indexPath2Description];
-    } else if (indexPath1Description) {
-        description = [description stringByAppendingFormat:@"%@ }", indexPath1Description];
-    } else if (indexPath2Description) {
-        description = [description stringByAppendingFormat:@"%@ }", indexPath2Description];
+    NSString *indexPathDescription = self.indexPath ? [NSString stringWithFormat:@"'%lu - %lu'", (unsigned long)self.indexPath.section, (unsigned long)self.indexPath.item] : nil;
+    NSString *indexPathNewDescription = self.indexPathNew ? [NSString stringWithFormat:@"'%lu - %lu'", (unsigned long)self.indexPathNew.section, (unsigned long)self.indexPathNew.item] : nil;
+    if (indexPathDescription && indexPathNewDescription) {
+        description = [description stringByAppendingFormat:@"%@ -> %@ }", indexPathDescription, indexPathNewDescription];
+    } else if (indexPathDescription) {
+        description = [description stringByAppendingFormat:@"%@ }", indexPathDescription];
+    } else if (indexPathNewDescription) {
+        description = [description stringByAppendingFormat:@"%@ }", indexPathNewDescription];
     }
     return description;
 }
@@ -349,14 +349,14 @@ static inline NSString *NSStringFromBMACollectionUpdateType(BMACollectionUpdateT
                       object:(id)object {
     self = [self initWithType:type object:object];
     if (self) {
-        _section1 = sectionIndex;
-        _section2 = newSectionIndex;
+        _sectionIndex = sectionIndex;
+        _sectionIndexNew = newSectionIndex;
     }
     return self;
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ { %@: %lu -> %lu }", super.description, NSStringFromBMACollectionUpdateType(self.type), (unsigned long)self.section1, (unsigned long)self.section2];
+    return [NSString stringWithFormat:@"%@ { %@: %lu -> %lu }", super.description, NSStringFromBMACollectionUpdateType(self.type), (unsigned long)self.sectionIndex, (unsigned long)self.sectionIndexNew];
 }
 
 - (BOOL)isSectionUpdate {
