@@ -44,16 +44,6 @@
                 if ([update isItemUpdate]) {
                     BMACollectionItemUpdate *itemUpdate = (BMACollectionItemUpdate *)update;
                     switch (update.type) {
-                        case BMACollectionUpdateTypeReload: {
-                            if (reloadCellBlock) {
-                                UICollectionViewCell *cell = [self cellForItemAtIndexPath:itemUpdate.indexPath];
-                                if (cell) {
-                                    reloadCellBlock(cell, itemUpdate.indexPath);
-                                }
-                            }
-                            
-                            break;
-                        }
                         case BMACollectionUpdateTypeDelete:
                             [self deleteItemsAtIndexPaths:@[ itemUpdate.indexPath ]];
                             break;
@@ -87,6 +77,22 @@
                 }
             }
         } completion:completionBlock];
+        [self updateVisibleCellsWithBlock:reloadCellBlock updates:updates];
+    }
+}
+
+- (void)updateVisibleCellsWithBlock:(void (^)(UICollectionViewCell *cell, NSIndexPath *indexPath))reloadCellBlock updates:(NSArray<BMACollectionUpdate *> *)updates {
+    if (!reloadCellBlock) {
+        return;
+    }
+    for (BMACollectionUpdate *update in updates) {
+        if ([update isItemUpdate] && update.type == BMACollectionUpdateTypeReload) {
+            BMACollectionItemUpdate *itemUpdate = (BMACollectionItemUpdate *)update;
+            UICollectionViewCell *cell = [self cellForItemAtIndexPath:itemUpdate.indexPath];
+            if (cell) {
+                reloadCellBlock(cell, itemUpdate.indexPath);
+            }
+        }
     }
 }
 
