@@ -70,11 +70,11 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 
 @interface BMACollectionItemUpdate : BMACollectionUpdate
 
-@property (nonatomic) NSIndexPath *indexPath;
+@property (nonatomic, nullable) NSIndexPath *indexPath;
 @property (nonatomic, nullable) NSIndexPath *indexPathNew;
 
 + (instancetype)updateWithType:(BMACollectionUpdateType)type
-                     indexPath:(NSIndexPath *)indexPath
+                     indexPath:(nullable NSIndexPath *)indexPath
                   newIndexPath:(nullable NSIndexPath *)newIndexPath
                         object:(id)object;
 
