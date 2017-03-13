@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://github.com/badoo/ios-collection-batch-updates.git"
   s.license      = { :type => "MIT"}
-  s.author       = { "Vladimir Magaziy" => "vladimir.magaziy@corp.badoo.com" }
+  s.author       = { "Vladimir Magaziy" => "vladimir.magaziy@corp.badoo.com", "Viacheslav Radchenko"  => "viacheslav.radchenko@gmail.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/badoo/ios-collection-batch-updates.git", :tag => s.version.to_s }
   s.source_files = "BMACollectionBatchUpdates/*"
