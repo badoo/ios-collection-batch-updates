@@ -47,11 +47,11 @@
     return self;
 }
 
-+ (void)calculateUpdatesForOldModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)oldSections
-                           newModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)newSections
-              sectionsPriorityOrder:(NSArray /*<NSString *>*/ *)sectionsPriorityOrder
++ (void)calculateUpdatesForOldModel:(NSArray<id<BMAUpdatableCollectionSection>> *)oldSections
+                           newModel:(NSArray<id<BMAUpdatableCollectionSection>> *)newSections
+              sectionsPriorityOrder:(NSArray<NSString *> *)sectionsPriorityOrder
                eliminatesDuplicates:(BOOL)eliminatesDuplicates
-                         completion:(void (^)(NSArray /*<BMAUpdatableCollectionSection *>*/ *sections, NSArray /*<BMACollectionUpdate *>*/ *updates))completion {
+                         completion:(void (^)(NSArray<id<BMAUpdatableCollectionSection>> *sections, NSArray<BMACollectionUpdate *> *updates))completion {
     @autoreleasepool {
         // Define section updates: UICollectionView and UITableView cannot deal with simultaneous updates for both items and sections (internal exceptions are generated leading to inconsistent states), so once a section change is detected perform full content reload instead of batch updates.
 

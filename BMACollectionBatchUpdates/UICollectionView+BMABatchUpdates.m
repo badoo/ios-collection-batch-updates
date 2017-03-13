@@ -27,7 +27,7 @@
 
 @implementation UICollectionView (BMABatchUpdates)
 
-- (void)bma_performBatchUpdates:(NSArray /*<BMACollectionUpdate *>*/ *)updates
+- (void)bma_performBatchUpdates:(NSArray<BMACollectionUpdate *> *)updates
        applyChangesToModelBlock:(void (^)(void))applyChangesToModelBlock
                 reloadCellBlock:(void (^)(UICollectionViewCell *cell, NSIndexPath *indexPath))reloadCellBlock
                 completionBlock:(void (^)(BOOL finished))completionBlock {

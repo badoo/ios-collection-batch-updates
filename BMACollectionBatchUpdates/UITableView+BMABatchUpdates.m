@@ -27,7 +27,7 @@
 
 @implementation UITableView (BMABatchUpdates)
 
-- (void)bma_performBatchUpdates:(NSArray /*<BMACollectionUpdate *>*/ *)updates
+- (void)bma_performBatchUpdates:(NSArray<BMACollectionUpdate *> *)updates
        applyChangesToModelBlock:(void (^)(void))applyChangesToModelBlock
                 reloadCellBlock:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))reloadCellBlock
                 completionBlock:(void (^)(void))completionBlock {

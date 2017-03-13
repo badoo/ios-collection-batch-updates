@@ -24,16 +24,22 @@
 
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
+@class BMACollectionUpdate;
+
 @interface UITableView (BMABatchUpdates)
 
-/// Performs given updates in batch and animated fashion
+/// Updates the receiver with specified changes in animated fashion
 /// @param updates updates to be performed: array of BMACollectionUpdate instances, if nil reloads data
-/// @param applyChangesBlock block in which changes should be applied
+/// @param applyChangesToModelBlock block in which changes should be applied
 /// @param reloadCellBlock optional block in which cells are to be updated
 /// @param completionBlock optional completion block
-- (void)bma_performBatchUpdates:(NSArray /*<BMACollectionUpdate *>*/ *)updates
-       applyChangesToModelBlock:(void (^)(void))applyChangesToModelBlock
-                reloadCellBlock:(void (^)(UITableViewCell *cell, NSIndexPath *indexPath))reloadCellBlock
-                completionBlock:(void (^)(void))completionBlock;
+- (void)bma_performBatchUpdates:(nullable NSArray<BMACollectionUpdate *> *)updates
+       applyChangesToModelBlock:(nullable void (^)(void))applyChangesToModelBlock
+                reloadCellBlock:(nullable void (^)(UITableViewCell *cell, NSIndexPath *indexPath))reloadCellBlock
+                completionBlock:(nullable void (^)(void))completionBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END

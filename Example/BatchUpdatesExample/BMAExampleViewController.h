@@ -24,10 +24,12 @@
 
 @import UIKit;
 
+@protocol BMAUpdatableCollectionSection;
+
 @interface BMAExampleViewController : UIViewController
 
-@property (nonatomic, readonly) NSDictionary /*<NSNumber *, UIColor *>*/ *itemColors;
-@property (nonatomic, readonly) NSArray /*<id<BMAUpdatableCollectionSection>>*/ *sections;
+@property (nonatomic, readonly) NSDictionary<NSNumber *, UIColor *> *itemColors;
+@property (nonatomic, readonly) NSArray<id<BMAUpdatableCollectionSection>> *sections;
 @property (nonatomic) NSArray *primitiveSections;  /// Used to change sections w/o generation of updates
 
 - (void)performBatchUpdates:(NSArray *)updates forSections:(NSArray *)sections;

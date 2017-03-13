@@ -81,14 +81,12 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        UICollectionReusableView *header = [self.collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                                                   withReuseIdentifier:[[self class] headerReuseIdentifier]
-                                                                                          forIndexPath:indexPath];
-        header.backgroundColor = self.itemColors[@(indexPath.section % self.itemColors.count)];
-        return header;
-    }
-    return nil;
+    NSAssert([kind isEqualToString:UICollectionElementKindSectionHeader], @"Supplementary element of kind '%@' is not supported", kind);
+    UICollectionReusableView *header = [self.collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                                               withReuseIdentifier:[[self class] headerReuseIdentifier]
+                                                                                      forIndexPath:indexPath];
+    header.backgroundColor = self.itemColors[@(indexPath.section % self.itemColors.count)];
+    return header;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)sectionIndex {

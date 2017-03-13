@@ -24,15 +24,17 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol BMAUpdatableCollectionItem <NSObject>
 @property (nonatomic, readonly, copy) NSString *uid;
 @optional
-@property (nonatomic, readonly) id userInfo;
+@property (nonatomic, readonly, nullable) id userInfo;
 
 @end
 
 @protocol BMAUpdatableCollectionSection <BMAUpdatableCollectionItem>
-@property (nonatomic, copy) NSArray /*<id<BMAUpdatableCollectionItem>>*/ *items;
+@property (nonatomic, copy) NSArray<id<BMAUpdatableCollectionItem>> *items;
 @end
 
 typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
@@ -55,11 +57,11 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 /// @param sectionsPriorityOrder array of section identifiers, in order for which sections are to be proceeded when checking items uniqueness; if nil then sections are processed in natural order; may contain not all section ids, only ones that should be processed first
 /// @param eliminatesDuplicates flag indicating duplicated items in different sections are to be eliminated during update
 /// @param completion block used to return results: sections and changes may be nil, in this case UICollectionview/UITableView is supposed be reload completely using -reloadData
-+ (void)calculateUpdatesForOldModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)oldSections
-                           newModel:(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *)newSections
-              sectionsPriorityOrder:(NSArray /*<NSString *>*/ *)sectionsPriorityOrder
++ (void)calculateUpdatesForOldModel:(NSArray<id<BMAUpdatableCollectionSection>> *)oldSections
+                           newModel:(NSArray<id<BMAUpdatableCollectionSection>> *)newSections
+              sectionsPriorityOrder:(nullable NSArray<NSString *> *)sectionsPriorityOrder
                eliminatesDuplicates:(BOOL)eliminatesDuplicates
-                         completion:(void (^)(NSArray /*<id<BMAUpdatableCollectionSection>>*/ *sections, NSArray /*<BMACollectionUpdate *>*/ *updates))completion;
+                         completion:(void (^)(NSArray<id<BMAUpdatableCollectionSection>> *sections, NSArray<BMACollectionUpdate *> *__nullable updates))completion;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithType:(BMACollectionUpdateType)type object:(id)object NS_DESIGNATED_INITIALIZER;
@@ -69,11 +71,11 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
 @interface BMACollectionItemUpdate : BMACollectionUpdate
 
 @property (nonatomic) NSIndexPath *indexPath;
-@property (nonatomic) NSIndexPath *indexPathNew;
+@property (nonatomic, nullable) NSIndexPath *indexPathNew;
 
 + (instancetype)updateWithType:(BMACollectionUpdateType)type
                      indexPath:(NSIndexPath *)indexPath
-                  newIndexPath:(NSIndexPath *)newIndexPath
+                  newIndexPath:(nullable NSIndexPath *)newIndexPath
                         object:(id)object;
 
 @end
@@ -89,3 +91,5 @@ typedef NS_ENUM(NSInteger, BMACollectionUpdateType) {
                         object:(id)object;
 
 @end
+
+NS_ASSUME_NONNULL_END
