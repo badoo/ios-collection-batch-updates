@@ -1,4 +1,3 @@
 language: objective-c
 xcode_workspace: Example/BatchUpdatesExample.xcworkspace
 xcode_scheme: BatchUpdatesExample-NoTests
-xcode_sdk: iphonesimulator
