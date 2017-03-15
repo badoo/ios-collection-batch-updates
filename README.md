@@ -1,4 +1,4 @@
-# BMACollectionBatchUpdates [![Build Status](https://api.travis-ci.org/badoo/ios-collection-batch-updates.svg)](https://travis-ci.org/badoo/ios-collection-batch-updates)  [![codecov.io](https://codecov.io/github/badoo/ios-collection-batch-updates/coverage.svg?branch=master)](https://codecov.io/github/badoo/ios-collection-batch-updates?branch=master) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ios-collection-batch-updates.svg)](https://img.shields.io/cocoapods/v/ios-collection-batch-updates.svg)
+# BMACollectionBatchUpdates [![Build Status](https://api.travis-ci.org/badoo/ios-collection-batch-updates.svg)](https://travis-ci.org/badoo/ios-collection-batch-updates)  [![codecov.io](https://codecov.io/github/badoo/ios-collection-batch-updates/coverage.svg?branch=master)](https://codecov.io/github/badoo/ios-collection-batch-updates?branch=master) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/BMACollectionBatchUpdates.svg)](https://img.shields.io/cocoapods/v/BMACollectionBatchUpdates.svg)
 `BMACollectionBatchUpdates` is a set of classes to generate updates and extensions to `UICollectionView` and `UITableView` to perform them safely in a batch manner.
 
 <div align="center">
@@ -67,7 +67,7 @@ Once both old and new data models are available, it has to calculate changes and
 1. Include the following line in your `Podfile`:
 
     ```
-    pod 'BMACollectionBatchUpdates', '~> 1.1' 
+    pod 'BMACollectionBatchUpdates', '~> 1.1'
     ```
 
 	If you like to live on the bleeding edge, you can use the `master` branch with:
