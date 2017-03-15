@@ -1,4 +1,6 @@
 language: objective-c
-xcode_workspace: Example/BatchUpdatesExample.xcworkspace
-xcode_scheme: BatchUpdatesExample-NoTests
-xcode_sdk: iphonesimulator
+osx_image: xcode8.1
+script:
+- set -o pipefail
+- xcodebuild clean build test -workspace Example/BatchUpdatesExample.xcworkspace -scheme BatchUpdatesExample -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7' -configuration Debug | xcpretty
+- bash <(curl -s https://codecov.io/bash) -J 'BatchUpdatesExample'
