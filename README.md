@@ -88,5 +88,5 @@ Once both old and new data models are available, it has to calculate changes and
 
 Source code is distributed under MIT license.
 
-##Blog
+## Blog
 Read more on our [tech blog](http://techblog.badoo.com/) or explore our other [open source projects](https://github.com/badoo)
