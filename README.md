@@ -59,6 +59,29 @@ Once both old and new data models are available, it has to calculate changes and
 @end
 ```
 
+### Generating cell update for existing BMAUpdatableCollectionItem
+
+`BMAUpdatableCollectionItem` conforms to `NSObject` protocol and by doing so it provides `isEqual` method for comparing items. In most cases comparing uids in `isEqual` will be enough, but sometimes your model may contain additional properties that can change and requie cell update.
+
+Simple example: online status which can be either online or offline. When it changes we need to gerenrate cell update for this item. To detect this change `isEqual` can be implemented in following way:
+
+```objectivec
+- (BOOL)isEqual:(id)object {
+    if (self == object) {
+        return YES;
+    }
+
+    if (![object isKindOfClass:[self class]]) {
+        return NO;
+    }
+
+    BMAExampleItem *item = (BMAExampleItem *)object;
+    return [self.uid isEqual:item.uid] && self.isOnline == item.isOnline;
+}
+
+@end
+```
+
 ## How to install
 
 ### Using CocoaPods
