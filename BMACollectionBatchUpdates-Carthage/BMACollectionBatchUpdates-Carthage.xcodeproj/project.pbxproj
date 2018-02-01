@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B8BD5DE2023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BD5DC2023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B8BD5DE2023643B00B4C797 /* BMACollectionBatchUpdates.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BD5DC2023643B00B4C797 /* BMACollectionBatchUpdates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B8BD5EB2023644400B4C797 /* UICollectionView+BMABatchUpdates.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD5E52023644300B4C797 /* UICollectionView+BMABatchUpdates.m */; };
 		0B8BD5EC2023644400B4C797 /* BMACollectionUpdates.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD5E62023644300B4C797 /* BMACollectionUpdates.m */; };
 		0B8BD5ED2023644400B4C797 /* UITableView+BMABatchUpdates.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD5E72023644300B4C797 /* UITableView+BMABatchUpdates.m */; };
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0B8BD5D92023643B00B4C797 /* BMACollectionBatchUpdates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMACollectionBatchUpdates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B8BD5DC2023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMACollectionBatchUpdates_Carthage.h; sourceTree = "<group>"; };
+		0B8BD5DC2023643B00B4C797 /* BMACollectionBatchUpdates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMACollectionBatchUpdates.h; sourceTree = "<group>"; };
 		0B8BD5DD2023643B00B4C797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8BD5E52023644300B4C797 /* UICollectionView+BMABatchUpdates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+BMABatchUpdates.m"; sourceTree = "<group>"; };
 		0B8BD5E62023644300B4C797 /* BMACollectionUpdates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMACollectionUpdates.m; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		0B8BD5DB2023643B00B4C797 /* BMACollectionBatchUpdates-Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BD5DC2023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.h */,
+				0B8BD5DC2023643B00B4C797 /* BMACollectionBatchUpdates.h */,
 				0B8BD5DD2023643B00B4C797 /* Info.plist */,
 			);
 			path = "BMACollectionBatchUpdates-Carthage";
@@ -88,7 +88,7 @@
 			files = (
 				0B8BD5EF2023644400B4C797 /* UICollectionView+BMABatchUpdates.h in Headers */,
 				0B8BD5EE2023644400B4C797 /* BMACollectionUpdates.h in Headers */,
-				0B8BD5DE2023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.h in Headers */,
+				0B8BD5DE2023643B00B4C797 /* BMACollectionBatchUpdates.h in Headers */,
 				0B8BD5F02023644400B4C797 /* UITableView+BMABatchUpdates.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
