@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B8BD5D92023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMACollectionBatchUpdates_Carthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B8BD5D92023643B00B4C797 /* BMACollectionBatchUpdates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMACollectionBatchUpdates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8BD5DC2023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMACollectionBatchUpdates_Carthage.h; sourceTree = "<group>"; };
 		0B8BD5DD2023643B00B4C797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8BD5E52023644300B4C797 /* UICollectionView+BMABatchUpdates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+BMABatchUpdates.m"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		0B8BD5DA2023643B00B4C797 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BD5D92023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.framework */,
+				0B8BD5D92023643B00B4C797 /* BMACollectionBatchUpdates.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,9 +96,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0B8BD5D82023643B00B4C797 /* BMACollectionBatchUpdates-Carthage */ = {
+		0B8BD5D82023643B00B4C797 /* BMACollectionBatchUpdates */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B8BD5E12023643B00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionBatchUpdates-Carthage" */;
+			buildConfigurationList = 0B8BD5E12023643B00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionBatchUpdates" */;
 			buildPhases = (
 				0B8BD5D42023643B00B4C797 /* Sources */,
 				0B8BD5D52023643B00B4C797 /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = "BMACollectionBatchUpdates-Carthage";
+			name = BMACollectionBatchUpdates;
 			productName = "BMACollectionBatchUpdates-Carthage";
-			productReference = 0B8BD5D92023643B00B4C797 /* BMACollectionBatchUpdates_Carthage.framework */;
+			productReference = 0B8BD5D92023643B00B4C797 /* BMACollectionBatchUpdates.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B8BD5D82023643B00B4C797 /* BMACollectionBatchUpdates-Carthage */,
+				0B8BD5D82023643B00B4C797 /* BMACollectionBatchUpdates */,
 			);
 		};
 /* End PBXProject section */
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B8BD5E12023643B00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionBatchUpdates-Carthage" */ = {
+		0B8BD5E12023643B00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionBatchUpdates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B8BD5E22023643B00B4C797 /* Debug */,

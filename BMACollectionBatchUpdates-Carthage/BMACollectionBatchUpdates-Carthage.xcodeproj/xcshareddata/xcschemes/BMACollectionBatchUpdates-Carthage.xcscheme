@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B8BD5D82023643B00B4C797"
-               BuildableName = "BMACollectionBatchUpdates_Carthage.framework"
-               BlueprintName = "BMACollectionBatchUpdates-Carthage"
+               BuildableName = "BMACollectionBatchUpdates.framework"
+               BlueprintName = "BMACollectionBatchUpdates"
                ReferencedContainer = "container:BMACollectionBatchUpdates-Carthage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B8BD5D82023643B00B4C797"
-            BuildableName = "BMACollectionBatchUpdates_Carthage.framework"
-            BlueprintName = "BMACollectionBatchUpdates-Carthage"
+            BuildableName = "BMACollectionBatchUpdates.framework"
+            BlueprintName = "BMACollectionBatchUpdates"
             ReferencedContainer = "container:BMACollectionBatchUpdates-Carthage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B8BD5D82023643B00B4C797"
-            BuildableName = "BMACollectionBatchUpdates_Carthage.framework"
-            BlueprintName = "BMACollectionBatchUpdates-Carthage"
+            BuildableName = "BMACollectionBatchUpdates.framework"
+            BlueprintName = "BMACollectionBatchUpdates"
             ReferencedContainer = "container:BMACollectionBatchUpdates-Carthage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
